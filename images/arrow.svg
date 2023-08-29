@@ -1,0 +1,4 @@
+<svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M69.4643 111.464L69.4643 31.4645M66.2841 29L101.639 64.3553M73.3553 29L38 64.3554" stroke="var(--arrow-bg-color)" stroke-width="10"/>
+<circle cx="70" cy="70" r="68" transform="rotate(-90 70 70)"  stroke="var(--arrow-bg-color)" stroke-width="4"/>
+</svg>
