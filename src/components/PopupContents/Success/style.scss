@@ -1,0 +1,22 @@
+.container {
+  padding: 60px;
+
+  @include mobile {
+    padding: 30px 20px;
+  }
+
+  .infoTitle {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .infoSubtitle {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-size: 18px;
+    text-align: center;
+  }
+}

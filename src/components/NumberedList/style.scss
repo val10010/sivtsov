@@ -1,0 +1,24 @@
+.items {
+  counter-reset: item;
+  margin-left: 20px;
+
+  .item {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-indent: -20px;
+    margin-bottom: 20px;
+
+    &:before {
+      content: counter(item) ". ";
+      counter-increment: item;
+      color: var(--highlighted-text-color);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

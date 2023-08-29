@@ -1,0 +1,66 @@
+.container {
+  max-width: 360px;
+  padding: 30px;
+  background: var(--primary-cart-bg-color);
+  border: 1px solid #616161;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+
+  @include tabletMobile {
+    padding: 25px;
+    max-width: 300px;
+  }
+
+  .priceBlock {
+    display: flex;
+    justify-content: center;
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin: 42px auto 10px;
+
+    @include tabletMobile {
+      font-size: 15px;
+      margin: 34px auto 8px;
+    }
+
+    .price {
+      color: var(--primary-text-color);
+      font-weight: 600;
+      margin-left: 12px;
+
+      @include tabletMobile {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .number {
+    font-family: var(--primary-text-font);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--highlighted-text-color);
+    margin-bottom: 20px;
+
+    @include tabletMobile {
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 16px;
+    }
+  }
+
+  .button {
+    width: 172px;
+    height: 57px;
+    margin: 0 auto;
+    display: block;
+
+    @include tabletMobile {
+      width: 143px;
+      height: 36px;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.container {
+  background: var(--primary-cart-bg-color);
+  padding: 30px 30px 50px 30px;
+  width: 100%;
+  max-width: 360px;
+  border: 1px solid #616161;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin-right: 60px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include tabletMobile {
+    width: 290px;
+    min-width: 290px;
+    max-height: 416px;
+    margin-right: 30px;
+    padding: 25px 25px 25px 25px;
+    box-shadow: 3.33333px 3.33333px 6.66667px rgba(0, 0, 0, 0.25);
+    border: 0.833333px solid #616161;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .number {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #5259FF;
+    margin-bottom: 40px;
+  }
+
+  .title {
+    height: 74px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 140%;
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+
+    @include tabletMobile {
+      font-size: 25px;
+    }
+  }
+
+  .subtitle {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #5259FF;
+
+    @include tabletMobile {
+      font-size: 13px;
+    }
+  }
+
+  .desc {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+    margin-bottom: 20px;
+
+    @include tabletMobile {
+      font-size: 13px;
+    }
+  }
+
+  .details {
+    cursor: pointer;
+    color: #5259FF;
+    font-family: var(--primary-text-font);
+    text-decoration: underline;
+    text-align: center;
+    margin-top: auto;
+    font-size: 20px;
+    line-height: 24px;
+
+    @include tabletMobile {
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+}
+
+.individual {
+  background-color: var(--individual-cart-bg-color);
+}
+
+.group {
+  background-color: var(--group-cart-bg-color);
+}

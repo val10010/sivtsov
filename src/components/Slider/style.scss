@@ -1,0 +1,98 @@
+.buttons {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  display: flex;
+
+  @include tablet {
+    top: 80px;
+  }
+
+  @include mobile {
+    bottom: -60px;
+    right: 0;
+    left: auto;
+  }
+
+  .prevButton {
+    background: url('../../images/slider_arrow.svg');
+    width: 80px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transform: rotate(180deg);
+    margin-right: 10px;
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    &:hover {
+      background: url('../../images/slider_arrow_hover.svg');
+    }
+  }
+
+  .nextButton {
+    background: url('../../images/slider_arrow.svg');
+    width: 80px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+
+    &[disabled] {
+      pointer-events: none;
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    &:hover {
+      background: url('../../images/slider_arrow_hover.svg');
+    }
+  }
+}
+
+.content {
+  margin: 0 100px;
+  background: #FFFFFF;
+  border: 1px solid #BEBEBE;
+  box-shadow: 4px 4px 13px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  padding: 40px 50px;
+  font-family: var(--secondary-text-font);
+  color: var(--secondary-text-color);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.bubbles {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .bubble {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 8px;
+
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .bubbleActive {
+    background-color: #298BFF;
+  }
+}

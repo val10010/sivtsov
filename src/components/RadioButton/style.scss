@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+
+  input {
+    display: none;
+
+    &:checked ~ label {
+      color: var(--highlighted-text-color);
+
+      &:before {
+        background: radial-gradient(#5259FF 35%, transparent 50%);
+      }
+    }
+  }
+
+  label {
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    padding-left: 30px;
+    cursor: pointer;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--primary-border-color);
+      border-radius: 50%;
+    }
+  }
+
+  .errorMessage {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: var(--error-text-color);
+  }
+}

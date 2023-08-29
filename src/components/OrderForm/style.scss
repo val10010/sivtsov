@@ -1,0 +1,122 @@
+.form {
+
+  .title {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-size: 50px;
+    line-height: 62px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .content {
+    padding: 40px 60px;
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--primary-border-color);
+    max-width: 600px;
+
+    @include tablet {
+      padding: 30px;
+    }
+
+    @include mobile {
+      padding: 20px;
+    }
+  }
+
+  .radioBtnsTitle {
+    font-family: var(--secondary-text-font);
+    color: var(--primary-text-color);
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  .messengersTitle {
+    font-family: var(--secondary-text-font);
+    color: var(--primary-text-color);
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  .input {
+    margin-bottom: 20px;
+  }
+
+  .messengers {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .radioBtns {
+    position: relative;
+    display: flex;
+    margin: 20px 0 50px;
+
+    .radioBtn {
+      margin-right: 20px;
+    }
+
+
+    .errorMessage {
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      color: var(--error-text-color);
+    }
+  }
+
+  .checkbox {
+    margin-top: 20px;
+    max-width: 550px;
+  }
+
+  .button {
+    width: 194px;
+    height: 50px;
+    margin: 54px auto 0;
+    display: block;
+
+    @include mobile {
+      margin-top: 20px;
+      width: 90%!important;
+    }
+  }
+}

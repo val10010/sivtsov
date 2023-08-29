@@ -1,0 +1,50 @@
+.menu {
+  @include container;
+  display: flex;
+  padding: 30px 0 0;
+  align-items: center;
+  justify-content: space-between;
+
+
+  .logo {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--primary-text-color);
+    width: 50%;
+  }
+
+  .container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      font-size: 14px;
+      font-weight: 400;
+      margin-right: 20px;
+      color: var(--primary-text-color);
+      position: relative;
+
+      &:after {
+        content: "";
+        background-color: #333;
+        bottom: -5px;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transition: all .3s ease;
+        width: 0;
+      }
+
+      &:hover {
+        &:after {
+          width: 100%;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

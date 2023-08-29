@@ -1,0 +1,93 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-form-bg-color);
+  border: 1px solid var(--primary-border-color);
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  box-shadow: 2.80667px 2.80667px 5.61333px rgba(0, 0, 0, 0.25);
+  padding: 40px;
+
+  @include mobile {
+    padding: 20px;
+  }
+
+  .title {
+    font-family: var(--secondary-text-font);
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 140%;
+    color: var(--primary-text-color);
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include mobile {
+      font-size: 22px;
+      line-height: 140%;
+    }
+  }
+
+  .radioBtnsTitle {
+    font-family: var(--secondary-text-font);
+    color: var(--primary-text-color);
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+    margin-bottom: 20px;
+
+    @include tabletMobile {
+      font-size: 16px;
+    }
+  }
+
+  .radioBtns {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .errorMessage {
+      font-family: var(--secondary-text-font);
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      color: var(--error-text-color);
+    }
+  }
+
+  .input {
+    margin-bottom: 20px;
+
+    @include mobile {
+      margin-bottom: 15px;
+    }
+  }
+
+  .button {
+    margin: 30px 0;
+
+    @include mobile {
+      margin: 20px 0;
+    }
+  }
+
+  .total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    font-family: var(--secondary-text-font);
+    color: var(--secondary-text-color);
+    margin-top: 30px;
+
+    .price {
+      font-weight: 500;
+      color: var(--primary-text-color)
+    }
+  }
+}

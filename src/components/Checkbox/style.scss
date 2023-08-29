@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+
+  .wrapper {
+    display: inline-block;
+    position: relative;
+    margin-right: 22px;
+
+    input {
+      width: 30px;
+      height: 28px;
+      margin: 0;
+      position: relative;
+      opacity: 0;
+      cursor: pointer;
+
+      &:checked ~ .checkbox {
+        background: url('../../images/checkbox_checked.svg') no-repeat;
+        border: none;
+      }
+    }
+
+    .checkbox {
+      display: block;
+      width: 30px;
+      height: 28px;
+      background: #fff;
+      border-radius: 5px;
+      border: 1px solid var(--primary-border-color);
+      position: absolute;
+      top: 2px;
+      pointer-events: none;
+
+      @include mobile {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+  }
+
+  .label {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: var(--secondary-text-color);
+    cursor: pointer;
+  }
+
+  .errorMessage {
+    font-family: var(--secondary-text-font);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    color: var(--error-text-color);
+  }
+
+}

@@ -1,0 +1,143 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.container {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  max-width: 1000px;
+  max-height: 90%;
+  overflow-y: auto;
+  border: 1px solid #BEBEBE;
+  border-radius: 20px;
+  padding: 40px 16px;
+
+  @include tabletMobile {
+    max-width: 90%;
+  }
+
+  .title {
+    font-family: var(--primary-text-font);
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 61px;
+    margin-bottom: 40px;
+    text-align: center;
+
+    @include tablet {
+      font-size: 36px;
+      line-height: 44px;
+      margin-bottom: 30px;
+    }
+
+    @include mobile {
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .content {
+    border-top: 1px solid var(--primary-border-color);
+    border-bottom: 1px solid var(--primary-border-color);
+    display: flex;
+    justify-content: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
+
+    .block {
+      padding: 40px;
+      width: 50%;
+      min-width: 300px;
+
+      @include mobile {
+        padding: 30px;
+      }
+
+      &:last-child:not(:only-child) {
+        border-left: 1px solid var(--primary-border-color);
+
+        @include mobile {
+          border-left: none;
+          border-top: 1px solid var(--primary-border-color);
+        }
+      }
+
+      .subtitle {
+        font-family: var(--primary-text-font);
+        color: var(--primary-text-color);
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 140%;
+        text-align: center;
+        margin-bottom: 34px;
+
+        @include tablet {
+          font-size: 22px;
+        }
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+
+      .list {
+
+        .item {
+          font-family: var(--secondary-text-font);
+          color: var(--secondary-text-color);
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 17px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          .price {
+            color: var(--highlighted-text-color);
+          }
+        }
+      }
+    }
+  }
+
+  .button {
+    width: 194px;
+    height: 50px;
+    margin: 40px auto 0;
+    display: block;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: url('../../images/cross.svg') no-repeat;
+  background-size: contain;
+  width: 23px;
+  height: 23px;
+  border: none;
+
+  @include mobile {
+    height: 13px;
+    width: 13px;
+    top: 11px;
+    right: 13px;
+  }
+}

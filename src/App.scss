@@ -1,0 +1,24 @@
+@import "~reset-css";
+@import "styles/common";
+
+body {
+  font-family: var(--primary-text-font);
+  background: var(--primary-bg-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+

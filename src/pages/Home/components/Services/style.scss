@@ -1,0 +1,58 @@
+.container {
+  @include container;
+  margin-bottom: 100px;
+
+  @include tabletMobile {
+    margin-bottom: 80px;
+  }
+
+  .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    .count {
+      color: #919191;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .link {
+      color: #333;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-decoration: underline;
+    }
+  }
+
+  .list {
+
+    .listItem {
+      padding: 16px 0;
+      border-bottom: 1px solid #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .itemName {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        color: #333;
+      }
+
+      .itemValue {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: #919191;
+      }
+    }
+  }
+}

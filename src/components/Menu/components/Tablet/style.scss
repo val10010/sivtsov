@@ -1,0 +1,116 @@
+.menu {
+  @include container;
+  display: flex;
+  padding: 20px 0;
+  font-weight: 400;
+  font-size: 16px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #BEBEBE;
+
+
+  .logo {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--primary-text-color);
+    font-family: var(--primary-text-font);
+    text-align: left;
+  }
+
+  .btnOpenSidebar {
+    color: var(--primary-text-color);
+    font-size: 16px;
+    line-height: 130%;
+    font-weight: 400;
+  }
+}
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  padding: 20px 34px 30px 20px;
+  background: var(--primary-bg-color);
+  position: fixed;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+
+  .btnCloseSidebar {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--primary-text-color);
+    margin-left: auto;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .row {
+    flex-direction: column;
+
+    .column {
+      border-bottom: 1px solid #ABABAB;
+      display: flex;
+      flex-direction: column;
+      padding: 14px 0;
+
+      &:last-child {
+        border: none;
+      }
+
+      .title {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        color: var(--primary-text-color);
+        margin-bottom: 10px;
+      }
+
+      .menuItem {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+        color: var(--secondary-text-color);
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .bottom {
+    margin-top: auto;
+
+    .item {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 130%;
+      color: #535353;
+      margin-bottom: 10px;
+      display: block;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+

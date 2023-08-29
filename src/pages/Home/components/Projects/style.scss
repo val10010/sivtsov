@@ -1,0 +1,89 @@
+.container {
+  @include container;
+  margin-bottom: 100px;
+
+  @include tabletMobile {
+    margin-bottom: 80px;
+  }
+
+  .count {
+    color: #919191;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 30px;
+  }
+
+  .projects {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    .item {
+      width: 595px;
+      height: 500px;
+      position: relative;
+
+      @include tabletMobile {
+        width: 100%;
+        height: auto;
+        max-width: 595px;
+      }
+
+      .itemImg {
+        border-radius: 10px;
+
+        @include tabletMobile {
+          width: 100%;
+          height: auto;
+          max-width: 595px;
+        }
+      }
+
+      .itemDesc {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%;
+          color: var(--projects-name-text-color);
+        }
+
+        .desc {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          color: var(--projects-desc-text-color);
+        }
+      }
+    }
+
+    .vikson {
+      --projects-name-text-color: #333;
+      --projects-desc-text-color: #919191;
+    }
+
+    .makarin {
+      --projects-name-text-color: #FFF;
+      --projects-desc-text-color: #D5D5D5;
+    }
+
+    .family {
+      --projects-name-text-color: #FFF;
+      --projects-desc-text-color: #D5D5D5;
+    }
+
+    .elfbar {
+      --projects-name-text-color: #333;
+      --projects-desc-text-color: #919191;
+    }
+  }
+}
