@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 600px;
+  color: #333;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    .details {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .link {
+      text-decoration: underline;
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+}

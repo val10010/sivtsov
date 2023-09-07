@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/val10010/bereginia.git"
+    "url": "git+https://github.com/val10010/sivtsov.git"
   },
   "author": "shark",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/val10010/bereginia/issues"
+    "url": "https://github.com/val10010/sivtsov/issues"
   },
-  "homepage": "https://github.com/val10010/bereginia",
+  "homepage": "https://github.com/val10010/sivtsov",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

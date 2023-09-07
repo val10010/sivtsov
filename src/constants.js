@@ -4,28 +4,28 @@ export const PROJECTS = [
         desc: 'сайт',
         imgSrc: './images/projects/1.jpg',
         modifier: 'vikson',
-        link: '/case/1'
+        link: '/vikson'
     },
     {
         name: 'Makarin',
         desc: 'сайт',
         imgSrc: './images/projects/2.jpg',
         modifier: 'makarin',
-        link: '/case/2'
+        link: '/makarin'
     },
     {
         name: 'Sivts Family',
         desc: 'сайт',
         imgSrc: './images/projects/3.jpg',
         modifier: 'family',
-        link: '/'
+        link: '/family'
     },
     {
         name: 'Sivts Family',
         desc: 'сайт',
         imgSrc: './images/projects/4.jpg',
         modifier: 'elfbar',
-        link: '/'
+        link: '/elfbar'
     }
 ];
 

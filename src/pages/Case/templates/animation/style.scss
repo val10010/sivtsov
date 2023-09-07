@@ -1,0 +1,25 @@
+.animation {
+  padding: 40px 0 100px;
+
+  .head {
+    @include container;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .link {
+      text-decoration: underline;
+    }
+  }
+
+  .img {
+    width: 300px;
+    height: 608px;
+    margin: 0 auto;
+    display: block;
+  }
+}

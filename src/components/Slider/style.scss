@@ -1,7 +1,8 @@
 .buttons {
   position: absolute;
   bottom: 40px;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
 
   @include tablet {
@@ -16,8 +17,8 @@
 
   .prevButton {
     background: url('../../images/slider_arrow.svg');
-    width: 80px;
-    height: 40px;
+    width: 51px;
+    height: 8px;
     border: none;
     cursor: pointer;
     transform: rotate(180deg);
@@ -36,8 +37,8 @@
 
   .nextButton {
     background: url('../../images/slider_arrow.svg');
-    width: 80px;
-    height: 40px;
+    width: 51px;
+    height: 8px;
     border: none;
     cursor: pointer;
 

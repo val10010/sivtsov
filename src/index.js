@@ -1,4 +1,5 @@
 import App from './App';
+import { StrictMode } from 'react';
 import { Provider } from 'react-redux';
 import Loader from 'Components/Loader';
 import React, { Suspense } from 'react';
@@ -10,12 +11,14 @@ import PopupManager from "Components/PopupManager";
 const store = setupStore();
 
 createRoot(document.getElementById('root')).render(
-    <Provider store={store}>
-        <Suspense fallback={<Loader/>}>
-            <BrowserRouter>
-                    <App/>
-                    <PopupManager/>
-            </BrowserRouter>
-        </Suspense>
-    </Provider>
+    <StrictMode>
+        <Provider store={store}>
+            <Suspense fallback={<Loader/>}>
+                <BrowserRouter basename="/">
+                        <App/>
+                        <PopupManager/>
+                </BrowserRouter>
+            </Suspense>
+        </Provider>
+    </StrictMode>
 );

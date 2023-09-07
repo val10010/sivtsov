@@ -1,0 +1,17 @@
+.fragment {
+  background: #E0E0E0;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 130%;
+  padding-top: 20px;
+
+  .container {
+    @include container;
+
+    .img {
+      width: 1200px;
+      height: 560px;
+    }
+  }
+}

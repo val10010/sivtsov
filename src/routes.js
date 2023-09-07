@@ -1,11 +1,14 @@
 import React, {lazy} from 'react';
+import { PROJECTS } from 'Main/constants';
 const Home = lazy(() => import('Pages/Home'));
 const Case = lazy(() => import('Pages/Case'));
 const NotFound = lazy(() => import('Pages/NotFound'));
 
 const routes = [
     { path: '/', element: <Home /> , exact: true },
-    { path: '/case/:caseId', element: <Case /> },
+    ...PROJECTS.map(({ link }, i) => (
+        { path: link, element: <Case id={i} /> }
+    )),
     { path: '*', element: <NotFound /> },
 ];
 

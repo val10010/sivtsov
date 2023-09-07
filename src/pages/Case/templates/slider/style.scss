@@ -1,0 +1,39 @@
+.slider {
+  background: #F7F7F7;
+  padding: 40px 0;
+
+  .sliderHead {
+    @include container;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    .link {
+      text-decoration: underline;
+    }
+  }
+
+  .sliderContainer {
+    position: relative;
+    padding-bottom: 80px;
+    min-height: 600px;
+  }
+
+  .sliderBottom {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    .slideLength {
+      color: #919191;
+    }
+  }
+}

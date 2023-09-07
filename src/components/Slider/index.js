@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { css, Global } from '@emotion/react';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
@@ -27,7 +27,7 @@ const slideTransitionStyles = css`
   }
 `;
 
-const Slider = ({ reviews = [], children, isBubblesNeeded, isButtonNeeded = true, className }) => {
+const Slider = ({ reviews = [], children, isBubblesNeeded, isButtonNeeded = true, className, handleActiveSlide }) => {
     const [index, setIndex] = useState(0);
     const bubbles = isBubblesNeeded &&  Array.from({length: reviews.length}, (_, i) => i);
 
@@ -38,6 +38,10 @@ const Slider = ({ reviews = [], children, isBubblesNeeded, isButtonNeeded = true
     const onPrev = () => {
         setIndex(index > 0 ? index - 1 : index);
     };
+
+    useEffect(() => {
+        handleActiveSlide && handleActiveSlide(index);
+    }, [index]);
 
     return (
         <>
@@ -54,7 +58,7 @@ const Slider = ({ reviews = [], children, isBubblesNeeded, isButtonNeeded = true
                     }
                     <SwitchTransition>
                         <CSSTransition
-                            key={reviews[index]}
+                            key={index}
                             timeout={500}
                             classNames="slide"
                         >
